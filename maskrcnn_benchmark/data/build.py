@@ -416,7 +416,7 @@ def make_data_loader(cfg, is_train=True, is_distributed=False, num_replicas=None
         datasets = build_dataset(cfg, dataset_list, transforms, DatasetCatalog, is_train,
                                  class_concat=cfg.DATASETS.CLASS_CONCAT,
                                  extra_args=extra_args)
-
+            
     data_loaders = []
     for di, dataset in enumerate(datasets):
         if is_train and cfg.SOLVER.MAX_EPOCH > 0:
