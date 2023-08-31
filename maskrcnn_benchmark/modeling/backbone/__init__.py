@@ -14,6 +14,7 @@ from . import swint
 from . import swint_v2
 from . import swint_vl
 from . import swint_v2_vl
+from . import self_attention_tansfer
 
 
 @registry.BACKBONES.register("R-50-C4")
@@ -229,6 +230,10 @@ def build_efficientdet_backbone(cfg):
         import torch
         model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
     return model
+
+@registry.BACKBONES.register("SELF_A_T")
+def build_self_attention_tansfer(cfg):
+    return self_attention_tansfer.self_Attention_Tansfer(cfg)
 
 
 def build_backbone(cfg):
