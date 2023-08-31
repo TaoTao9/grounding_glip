@@ -8,7 +8,7 @@ from maskrcnn_benchmark.layers import DropBlock2D, DyHead
 from . import fpn as fpn_module
 from . import bifpn
 from . import resnet
-from . import efficientnet
+from . import efficientnetgit
 from . import efficientdet
 from . import swint
 from . import swint_v2
